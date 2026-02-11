@@ -4,12 +4,12 @@ import { gameConfigs } from '@/lib/gameConfigs';
 import { chemistryQuestions } from '@/data/chemistryQuestions';
 import { useNavigate } from 'react-router-dom';
 
-const ChemistryGame: React.FC = () => {
+const Chemistry: React.FC = () => {
   const navigate = useNavigate();
 
   // البحث عن إعدادات لعبة الكيمياء من القائمة
   // ملاحظة: تأكد أن id: 'chemistry' موجود في ملف gameConfigs
-  const config = gameConfigs.find(g => g.id === 'chemistry') || gameConfigs.find(g => g.id === 'fast-math');
+  const config = gameConfigs.find(g => g.id === 'chemistry') || gameConfigs.find(g => g.id === 'FastMath');
 
   return (
     <GameEngine
@@ -20,4 +20,4 @@ const ChemistryGame: React.FC = () => {
   );
 };
 
-export default ChemistryGame;
+export default Chemistry;

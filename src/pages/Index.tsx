@@ -5,25 +5,26 @@ import Leaderboard from '@/components/Leaderboard';
 import Footer from '@/components/Footer';
 import saraGamingLogo from '@/assets/sara-gaming1.jpg'; // صورة الشعار اللي فوق
 import saraGamingBG from '@/assets/sara-gaming.jpg';   // صورة الخلفية
+import FastMath from './games/FastMath';
 
 const gameRoutes: Record<string, string> = {
-  'capitals': '/game/capitals',
+  'Capitals': '/game/Capitals',
   'flags': '/game/flags',
   'arabic-songs': '/game/arabic-songs',
   'famous-movies': '/game/famous-movies',
-  'fast-math': '/game/fast-math',
+  'FastMath': '/game/FastMathh',
   'chemistry': '/game/chemistry',
   'fastest-answer': '/game/fastest-answer',
   'time-limit': '/game/time-limit',
   'true-false': '/game/true-false',
   'who-said': '/game/who-said',
-  'jordanian-food': '/game/jordanian-food',
+  'jordanianfood': '/game/jordanianfood',
   'jordan-places': '/game/jordan-places',
   'saudi-landmarks': '/game/saudi-landmarks',
   'emoji-majors': '/game/emoji-majors',
 };
 
-const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanian-food', 'fast-math', 'chemistry', 'fastest-answer'];
+const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'FastMath', 'chemistry', 'fastest-answer'];
 
 const Index: React.FC = () => {
   const navigate = useNavigate();

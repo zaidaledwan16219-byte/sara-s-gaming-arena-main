@@ -4,9 +4,9 @@ import { gameConfigs } from '@/lib/gameConfigs';
 import { jordanianFoodQuestions } from '@/data/jordanianfoodQuestions';
 import { useNavigate } from 'react-router-dom';
 
-const JordanianFoodGame: React.FC = () => {
+const JordanianFood = () => {
   const navigate = useNavigate();
-  const config = gameConfigs.find(g => g.id === 'jordanian-food');
+  const config = gameConfigs.find(g => g.id === 'jordanianfood');
 
   if (!config) return null;
 
@@ -19,4 +19,4 @@ const JordanianFoodGame: React.FC = () => {
   );
 };
 
-export default JordanianFoodGame;
+export default JordanianFood;

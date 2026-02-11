@@ -1,6 +1,6 @@
 import { Question } from '../lib/types';
 
-export const capitalsQuestions: Question[] = [
+export const CapitalsQuestions: Question[] = [
   { id: 1, question: 'ما عاصمة فرنسا؟', options: ['باريس', 'ليون', 'مارسيليا', 'نيس'], correctAnswer: 'باريس', image: 'https://flagcdn.com/w160/fr.png' },
   { id: 2, question: 'ما عاصمة اليابان؟', options: ['طوكيو', 'أوساكا', 'كيوتو', 'هيروشيما'], correctAnswer: 'طوكيو', image: 'https://flagcdn.com/w160/jp.png' },
   { id: 3, question: 'ما عاصمة البرازيل؟', options: ['برازيليا', 'ريو دي جانيرو', 'ساو باولو', 'سلفادور'], correctAnswer: 'برازيليا', image: 'https://flagcdn.com/w160/br.png' },

@@ -1,6 +1,6 @@
 import { Question } from '../lib/types';
 
-export const mathQuestions: Question[] = [
+export const FastMathQuestions: Question[] = [
   // --- مستوى متوسط (جمع وطرح وضرب بسيط) ---
   { id: 1, question: "ما ناتج: 45 + 37؟", options: ["72", "82", "92", "85"], correctAnswer: "82" },
   { id: 2, question: "ما ناتج: 12 × 12؟", options: ["124", "144", "134", "154"], correctAnswer: "144" },
