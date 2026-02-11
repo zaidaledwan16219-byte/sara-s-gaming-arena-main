@@ -25,6 +25,7 @@ const gameRoutes: Record<string, string> = {
 };
 
 const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'FastMath', 'chemistry', 'fastestAnswer'];
+const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'chemistry', 'fastestanswer'];
 
 const Index: React.FC = () => {
   const navigate = useNavigate();
