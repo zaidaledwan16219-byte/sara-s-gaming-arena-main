@@ -7,7 +7,7 @@ export const gameConfigs: GameConfig[] = [
   { id: 'famous-movies', title: 'أفلام مشهورة', description: 'حدد الفيلم من الاقتباس أو الصورة', icon: '🎥', mode: 'team', timePerQuestion: 15, questionsPerRound: 20, category: 'ترفيه' },
   { id: 'FastMath', title: 'رياضيات سريعة', description: 'حل العمليات الحسابية بسرعة', icon: '🔢', mode: 'both', timePerQuestion: 10, questionsPerRound: 20, category: 'تعليم' },
   { id: 'chemistry', title: 'كيمياء العناصر', description: 'اختر الرمز الصحيح للعنصر', icon: '⚗️', mode: 'both', timePerQuestion: 12, questionsPerRound: 20, category: 'تعليم' },
-  { id: 'fastest-answer', title: 'أسرع إجابة', description: 'أول إجابة صحيحة تكسب النقاط', icon: '⚡', mode: 'team', timePerQuestion: 8, questionsPerRound: 20, category: 'تحدي' },
+  { id: 'FastestAnswer', title: 'أسرع إجابة', description: 'أول إجابة صحيحة تكسب النقاط', icon: '⚡', mode: 'team', timePerQuestion: 8, questionsPerRound: 20, category: 'تحدي' },
   { id: 'time-limit', title: 'وقت محدود', description: 'أجب خلال 5 ثوانٍ فقط!', icon: '⏱️', mode: 'solo', timePerQuestion: 5, questionsPerRound: 20, category: 'تحدي' },
   { id: 'true-false', title: 'صح أم خطأ', description: 'حدد إذا كانت المعلومة صحيحة', icon: '✅', mode: 'solo', timePerQuestion: 8, questionsPerRound: 20, category: 'معلومات' },
   { id: 'who-said', title: 'من القائل', description: 'حدد صاحب الاقتباس المشهور', icon: '💬', mode: 'team', timePerQuestion: 15, questionsPerRound: 20, category: 'ثقافة' },
