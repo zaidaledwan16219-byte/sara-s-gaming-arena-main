@@ -1,6 +1,5 @@
 import { Question } from '../lib/types';
 
-export const jordanianFoodQuestions: Question[] = [
 export const jordanianfoodQuestions: Question[] = [
   { id: 1, question: "ما هو الطبق الوطني الرسمي في الأردن؟", options: ["منسف", "مقلوبة", "مسخن", "مندي"], correctAnswer: "منسف", image: "https://images.unsplash.com/photo-1541518763669-279f00ed51ca?w=800" },
   { id: 2, question: "ما هو نوع اللبن المستخدم في المنسف الأصلي؟", options: ["لبن رايب", "جميد كركي", "لبنة", "كريمة طبخ"], correctAnswer: "جميد كركي", image: "https://images.unsplash.com/photo-1626131440330-94301569069d?w=800" },
