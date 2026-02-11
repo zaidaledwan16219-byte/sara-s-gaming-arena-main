@@ -1,0 +1,17 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* إضافة الكود التالي للخلفية /
+  background-image: url('/src/assets/sara-gaming.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; / لون احتياطي أسود */
+}

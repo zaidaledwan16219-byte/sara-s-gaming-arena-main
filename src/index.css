@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 43 100% 50%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 43 80% 45%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 43 30% 20%;
+    --input: 0 0% 15%;
+    --ring: 43 100% 50%;
+
+    --radius: 0.75rem;
+
+    --gold: 43 100% 50%;
+    --gold-light: 43 100% 65%;
+    --gold-dark: 43 80% 35%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 43 100% 50%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 43 30% 20%;
+    --sidebar-ring: 43 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-cairo;
+    direction: rtl;
+  }
+}
+
+@layer utilities {
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(43, 100%, 50%), hsl(43, 100%, 65%), hsl(43, 80%, 35%));
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, hsl(43, 100%, 50%), hsl(43, 100%, 70%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-flip {
+    perspective: 1000px;
+  }
+
+  .card-flip-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .card-flip-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .card-flip-front,
+  .card-flip-back {
+    backface-visibility: hidden;
+    position: absolute;
+    inset: 0;
+  }
+
+  .card-flip-back {
+    transform: rotateY(180deg);
+  }
+
+  .gold-border {
+    border: 1px solid hsl(43, 100%, 50%);
+  }
+
+  .gold-shadow {
+    box-shadow: 0 0 20px hsl(43 100% 50% / 0.2), 0 0 40px hsl(43 100% 50% / 0.1);
+  }
+}
