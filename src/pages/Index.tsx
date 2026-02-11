@@ -14,7 +14,7 @@ const gameRoutes: Record<string, string> = {
   'famous-movies': '/game/famous-movies',
   'FastMath': '/game/FastMathh',
   'chemistry': '/game/chemistry',
-  'fastest-answer': '/game/fastest-answer',
+  'FastestAnswer': '/game/FastestAnswer',
   'time-limit': '/game/time-limit',
   'true-false': '/game/true-false',
   'who-said': '/game/who-said',
@@ -24,7 +24,7 @@ const gameRoutes: Record<string, string> = {
   'emoji-majors': '/game/emoji-majors',
 };
 
-const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'FastMath', 'chemistry', 'fastest-answer'];
+const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'FastMath', 'chemistry', 'fastestAnswer'];
 
 const Index: React.FC = () => {
   const navigate = useNavigate();
