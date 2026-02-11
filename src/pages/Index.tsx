@@ -24,7 +24,6 @@ const gameRoutes: Record<string, string> = {
   'emoji-majors': '/game/emoji-majors',
 };
 
-const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'FastMath', 'chemistry', 'fastestAnswer'];
 const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'chemistry', 'fastestanswer'];
 
 const Index: React.FC = () => {
