@@ -9,9 +9,9 @@ import Capitals from "./pages/games/Capitals";
 import FlagsGame from "./pages/games/FlagsGame";
 import ArabicSongsGame from "./pages/games/ArabicSongsGame";
 import FamousMoviesGame from "./pages/games/FamousMoviesGame";
-import JordanianFood from './pages/games/Jordanian-Food';
+import JordanianFood from './pages/games/JordanianFood';
 import Chemistry from "./pages/games/Chemistry";
-import FastestAnswer from "./pages/games//FastestAnswerGame";
+import FastestAnswer from "./pages/games/FastestAnswer";
 const queryClient = new QueryClient();
 
 const App = () => (
