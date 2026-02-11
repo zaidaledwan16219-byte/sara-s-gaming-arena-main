@@ -1,6 +1,6 @@
 import { Question } from '../lib/types';
 
-export const fastestAnswerQuestions: Question[] = [
+export const FastestAnswerQuestions: Question[] = [
 
   { id: 1, question: "ما هو أسرع حيوان بري؟", options: ["الفهد", "الأسد", "الغزال", "الكلب"], correctAnswer: "الفهد" },
   { id: 2, question: "كم عدد ألوان قوس قزح؟", options: ["5", "6", "7", "8"], correctAnswer: "7" },
