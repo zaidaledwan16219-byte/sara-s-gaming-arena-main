@@ -13,7 +13,7 @@ const gameRoutes: Record<string, string> = {
   'arabic-songs': '/game/arabic-songs',
   'famous-movies': '/game/famous-movies',
   'fastmath': '/game/FastMath',
-  'chemistry': '/game/chemistry',
+  'chemistry': '/game/Chemistry',
   'fastestanswer': '/game/fastestanswer',
   'time-limit': '/game/time-limit',
   'true-false': '/game/true-false',
