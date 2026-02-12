@@ -8,13 +8,13 @@ import saraGamingBG from '@/assets/sara-gaming.jpg';   // صورة الخلفي�
 import FastMath from './games/FastMath';
 
 const gameRoutes: Record<string, string> = {
-  'Capitals': '/game/Capitals',
+  'capitals': '/game/capitals',
   'flags': '/game/flags',
   'arabic-songs': '/game/arabic-songs',
   'famous-movies': '/game/famous-movies',
-  'FastMath': '/game/FastMathh',
+  'fastmath': '/game/FastMath',
   'chemistry': '/game/chemistry',
-  'FastestAnswer': '/game/FastestAnswer',
+  'fastestanswer': '/game/fastestanswer',
   'time-limit': '/game/time-limit',
   'true-false': '/game/true-false',
   'who-said': '/game/who-said',
@@ -22,9 +22,10 @@ const gameRoutes: Record<string, string> = {
   'jordan-places': '/game/jordan-places',
   'saudi-landmarks': '/game/saudi-landmarks',
   'emoji-majors': '/game/emoji-majors',
+  'series': '/game/series',
 };
 
-const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'chemistry', 'fastestanswer'];
+const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'chemistry', 'fastestanswer', 'fastmath', 'series' ];
 
 const Index: React.FC = () => {
   const navigate = useNavigate();

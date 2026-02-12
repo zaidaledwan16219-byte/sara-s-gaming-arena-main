@@ -9,7 +9,7 @@ const Chemistry: React.FC = () => {
 
   // البحث عن إعدادات لعبة الكيمياء من القائمة
   // ملاحظة: تأكد أن id: 'chemistry' موجود في ملف gameConfigs
-  const config = gameConfigs.find(g => g.id === 'chemistry') || gameConfigs.find(g => g.id === 'FastMath');
+  const config = gameConfigs.find(g => g.id === 'chemistry')
 
   return (
     <GameEngine

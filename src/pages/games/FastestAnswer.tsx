@@ -7,10 +7,10 @@ import { useNavigate } from 'react-router-dom';
 const FastestAnswer: React.FC = () => {
   const navigate = useNavigate();
 
-  // تأكد إن الـ id هون هو 'Fastest-Answer' زي ما كتبنا في الـ config
-  const config = gameConfigs.find(g => g.id === 'FastestAnswer');
+  // تأكد إن الـ id هون مطابق لملف gameConfigs.ts
+  const config = gameConfigs.find(g => g.id === 'fastestanswer');
 
-  if (!config) return <div>تحميل الإعدادات...</div>;
+  if (!config) return <div className="text-white p-10">تحميل الإعدادات...</div>;
 
   return (
     <GameEngine

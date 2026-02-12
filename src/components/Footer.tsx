@@ -26,7 +26,7 @@ const Footer: React.FC = () => (
           </a>
         ))}
       </div>
-      <p className="text-sm text-muted-foreground">© 2024 Sara Game. جميع الحقوق محفوظة.</p>
+      <p className="text-sm text-muted-foreground">جميع الحقوق محفوطة لـ Sara Gaming</p>
     </div>
   </footer>
 );

@@ -1,22 +1,22 @@
 import React from 'react';
 import GameEngine from '@/components/game/GameEngine';
 import { gameConfigs } from '@/lib/gameConfigs';
-import { FastMathQuestions } from '@/data/fasMathQuestions';
+import { seriesQuestions } from '@/data/seriesQuestions';
 import { useNavigate } from 'react-router-dom';
 
-const FastMath: React.FC = () => {
+const SeriesGame: React.FC = () => {
   const navigate = useNavigate();
 
-  // البحث عن إعدادات لعبة الرياضيات من القائمة
-  const config = gameConfigs.find(g => g.id === 'fastmath');
+  // البحث عن إعدادات اللعبة باستخدام المعرف 'series'
+  const config = gameConfigs.find(g => g.id === 'series')!;
 
   return (
     <GameEngine 
       config={config} 
-      questions={FastMathQuestions} 
+      questions={seriesQuestions} 
       onBack={() => navigate('/')} 
     />
   );
 };
 
-export default FastMath;
+export default SeriesGame;

@@ -6,8 +6,19 @@ import { useNavigate } from 'react-router-dom';
 
 const CapitalsGame: React.FC = () => {
   const navigate = useNavigate();
-  const config = gameConfigs.find(g => g.id === 'capitals')!;
-  return <GameEngine config={config} questions={CapitalsQuestions} onBack={() => navigate('/')} />;
+
+  // شلنا علامة التعجب (!) وضفنا فحص بسيط عشان ما ينهار الموقع
+  const config = gameConfigs.find((g) => g.id === 'capitals');
+
+  if (!config) return <div>Loading...</div>;
+
+  return (
+    <GameEngine 
+      config={config} 
+      questions={CapitalsQuestions} 
+      onBack={() => navigate('/')} 
+    />
+  );
 };
 
-export default CapitalsGame
+export default CapitalsGame;
