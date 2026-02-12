@@ -55,7 +55,7 @@ const Index: React.FC = () => {
             className="w-48 h-48 object-cover rounded-full mx-auto mb-6 gold-border gold-shadow"
           />
           <h1 className="text-5xl font-black gold-text mb-3">Sara Game</h1>
-          <p className="text-xl text-muted-foreground">اختبر معلوماتك مع 14 لعبة تفاعلية!</p>
+          <p className="text-xl text-muted-foreground">اختبر معلوماتك مع 15 لعبة تفاعلية!</p>
         </header>
 
         {/* Games Grid */}
