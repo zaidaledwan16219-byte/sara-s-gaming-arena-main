@@ -13,7 +13,7 @@ export interface GameConfig {
   title: string;
   description: string;
   icon: string;
-  mode: 'solo' | 'team' | 'both';
+  mode: 'team' | 'solo' | 'both' | 'multiplayer';
   timePerQuestion: number; // seconds
   questionsPerRound: number;
   category: string;
@@ -35,7 +35,7 @@ export interface TeamScore {
   date: string;
 }
 
-export type GameMode = 'solo' | 'team';
+export type GameMode = 'team' | 'solo'| 'both' | 'multiplayer';
 
 export interface GameState {
   mode: GameMode;

@@ -5,7 +5,7 @@ import Leaderboard from '@/components/Leaderboard';
 import Footer from '@/components/Footer';
 import saraGamingLogo from '@/assets/sara-gaming1.jpg'; // صورة الشعار اللي فوق
 import saraGamingBG from '@/assets/sara-gaming.jpg';   // صورة الخلفية
-import FastMath from './games/FastMath';
+import FastMath from './games/FastMath';  
 
 const gameRoutes: Record<string, string> = {
   'capitals': '/game/capitals',
@@ -23,9 +23,10 @@ const gameRoutes: Record<string, string> = {
   'saudi-landmarks': '/game/saudi-landmarks',
   'emoji-majors': '/game/emoji-majors',
   'series': '/game/series',
+  'death-roulette': '/game/Death-roulette',
 };
 
-const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'chemistry', 'fastestanswer', 'fastmath', 'series' ];
+const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'chemistry', 'fastestanswer', 'fastmath', 'series', 'death-roulette'];
 
 const Index: React.FC = () => {
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ const Index: React.FC = () => {
             className="w-48 h-48 object-cover rounded-full mx-auto mb-6 gold-border gold-shadow"
           />
           <h1 className="text-5xl font-black gold-text mb-3">Sara Game</h1>
-          <p className="text-xl text-muted-foreground">اختبر معلوماتك مع 15 لعبة تفاعلية!</p>
+          <p className="text-xl text-muted-foreground">اختبر معلوماتك مع 16 لعبة تفاعلية!</p>
         </header>
 
         {/* Games Grid */}
@@ -82,9 +83,12 @@ const Index: React.FC = () => {
                     <span className="text-xs bg-secondary px-2 py-1 rounded-full text-muted-foreground">
                       {game.category}
                     </span>
-                    <span className="text-xs bg-secondary px-2 py-1 rounded-full text-muted-foreground">
-                      {game.mode === 'solo' ? 'فردي' : game.mode === 'team' ? 'فريقين' : 'فردي/فريقين'}
-                    </span>
+                      <span className="text-xs bg-secondary px-2 py-1 rounded-full text-muted-foreground whitespace-nowrap">
+                        {game.mode === 'both' ? 'فردي / فريقين' : 
+                        game.mode === 'multiplayer' ? 'تحدي أونلاين' : 
+                        game.mode === 'team' ? 'فريقين' : 
+                        game.mode === 'solo' ? 'فردي' : ''}
+                      </span>
                   </div>
                   {!isAvailable && (
                     <span className="text-xs text-primary mt-2 block">🔜 قريباً</span>
