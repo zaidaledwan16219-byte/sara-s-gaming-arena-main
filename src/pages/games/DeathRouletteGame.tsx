@@ -42,7 +42,6 @@ const DeathRouletteGame: React.FC = () => {
     oscillator.stop(audioCtx.current.currentTime + 0.1);
   };
 
-  // تعديل: منع إضافة نفس الاسم مرتين
   const addPlayer = () => {
     const cleanName = playerName.trim();
     if (!cleanName) return;
@@ -69,6 +68,17 @@ const DeathRouletteGame: React.FC = () => {
     initAudio();
     resetChamber();
     setGameStarted(true);
+  };
+
+  // دالة إعادة اللعب الجديدة: بتصفر الحالات عشان تبدأ من الصفر بدون Refresh
+  const handleRestart = () => {
+    setPlayers(prev => prev.map(p => ({ ...p, fails: 0, alive: true })));
+    setWinner(null);
+    setPhase('selection');
+    setSelectedIdx(null);
+    setIsFiring(false);
+    setGameStarted(false); // بترجعك لشاشة إضافة الأسماء، إذا بدك تبدأ اللعب فوراً خليها true
+    resetChamber();
   };
 
   const startSpin = () => {
@@ -113,7 +123,6 @@ const DeathRouletteGame: React.FC = () => {
         setPlayers(updatedPlayers);
         resetChamber();
         
-        // ننتظر الفيديو والصوت يخلصوا قبل ما نطلع الفائز
         setTimeout(() => {
           checkWinner(updatedPlayers);
         }, 2500); 
@@ -147,7 +156,22 @@ const DeathRouletteGame: React.FC = () => {
       <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-10 text-center animate-in fade-in duration-1000">
         <h1 className="text-7xl font-black text-yellow-500 mb-6 drop-shadow-2xl animate-bounce">🏆 الفائز النهائي 🏆</h1>
         <div className="text-9xl font-black mb-12 text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]">{winner}</div>
-        <button onClick={() => window.location.reload()} className="px-16 py-6 bg-red-600 rounded-3xl font-black text-3xl hover:scale-110 transition shadow-[0_0_30px_red]">لعبة جديدة</button>
+        
+        <div className="flex flex-col sm:flex-row gap-6">
+          <button 
+            onClick={handleRestart} 
+            className="px-16 py-6 bg-red-600 rounded-3xl font-black text-3xl hover:scale-110 transition shadow-[0_0_30px_red]"
+          >
+            لعبة جديدة
+          </button>
+          
+          <button 
+            onClick={() => navigate('/')} 
+            className="px-16 py-6 bg-zinc-700 rounded-3xl font-black text-3xl hover:scale-110 transition shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+          >
+            الرئيسية
+          </button>
+        </div>
       </div>
     );
   }
