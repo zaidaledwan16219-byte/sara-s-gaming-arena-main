@@ -12,9 +12,9 @@ import FamousMoviesGame from "./pages/games/FamousMoviesGame";
 import ChemistryGame from "./pages/games/ChemistryGame";
 import JordanianFood from "./pages/games/Jordanian-Food";
 import FastestAnswer from "./pages/games/FastestAnswer";
-import FastMathGame from "./pages/games/FastMath";
-import SeriesGame from './pages/games/Series';
+import FastMath from "./pages/games/FastMath";
 import DeathRouletteGame from "./pages/games/DeathRouletteGame";
+import SeriesGame from './pages/games/Series';
 
 const queryClient = new QueryClient();
 
@@ -31,7 +31,7 @@ const App = () => (
           <Route path="/game/jordanianfood" element={<JordanianFood />} />
           <Route path="/game/Chemistry" element={<ChemistryGame />} />
           <Route path="/game/fastestanswer" element={<FastestAnswer />} />
-          <Route path="/game/fastmath" element={<FastMathGame />} />
+          <Route path="/game/fastmath" element={<FastMath />} />
           <Route path="/game/arabic-songs" element={<ArabicSongsGame />} />
           <Route path="/game/famous-movies" element={<FamousMoviesGame />} />
           <Route path="/game/series" element={<SeriesGame />} />

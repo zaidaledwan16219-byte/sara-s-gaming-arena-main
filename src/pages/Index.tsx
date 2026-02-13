@@ -5,7 +5,8 @@ import Leaderboard from '@/components/Leaderboard';
 import Footer from '@/components/Footer';
 import saraGamingLogo from '@/assets/sara-gaming1.jpg'; // صورة الشعار اللي فوق
 import saraGamingBG from '@/assets/sara-gaming.jpg';   // صورة الخلفية
-import FastMath from './games/FastMath';  
+import FastMath from './games/FastMath';
+import DeathRouletteGame from './games/DeathRouletteGame';
 
 const gameRoutes: Record<string, string> = {
   'capitals': '/game/capitals',
@@ -23,7 +24,7 @@ const gameRoutes: Record<string, string> = {
   'saudi-landmarks': '/game/saudi-landmarks',
   'emoji-majors': '/game/emoji-majors',
   'series': '/game/series',
-  'death-roulette': '/game/Death-roulette',
+  'death-roulette': '/game/death-roulette',
 };
 
 const availableGames = ['capitals', 'flags', 'arabic-songs', 'famous-movies', 'jordanianfood', 'chemistry', 'fastestanswer', 'fastmath', 'series', 'death-roulette'];
