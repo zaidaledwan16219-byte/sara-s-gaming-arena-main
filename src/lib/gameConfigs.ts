@@ -11,10 +11,11 @@ export const gameConfigs: GameConfig[] = [
   { id: 'jordanianfood', title: 'أكلات أردنية', description: 'أسئلة عن الأكلات الشعبية الأردنية', icon: '🍽️', mode: 'solo', timePerQuestion: 12, questionsPerRound: 20, category: 'طعام' },
   { id: 'series', title: 'تحدي المسلسلات', description: 'اختبر معرفتك بمسلسلات باب الحارة، فروم، ولاكاسا دي بابل', icon: '📺', mode: 'both', timePerQuestion: 15, questionsPerRound: 20, category: 'entertainment' },
   { id: 'death-roulette', title: 'روليت الموت', description: 'تحدي الحظ الأخير، 3 أرواح ومسدس واحد.. هل ستنجو؟', icon: '💀', mode: 'multiplayer', timePerQuestion: 0, questionsPerRound: 0, category: 'تحدي' },
+  { id: 'tiktok', title: 'مشاهير التيكتوك', description: 'اختبر معرفتك بمشاهير التيكتوك وأشهر التريندات', icon: '📱', mode: 'solo', timePerQuestion: 15, questionsPerRound: 10, category: 'ترفيه' },
   { id: 'time-limit', title: 'وقت محدود', description: 'أجب خلال 5 ثوانٍ فقط!', icon: '⏱️', mode: 'solo', timePerQuestion: 5, questionsPerRound: 20, category: 'تحدي' },
   { id: 'true-false', title: 'صح أم خطأ', description: 'حدد إذا كانت المعلومة صحيحة', icon: '✅', mode: 'solo', timePerQuestion: 8, questionsPerRound: 20, category: 'معلومات' },
   { id: 'who-said', title: 'من القائل', description: 'حدد صاحب الاقتباس المشهور', icon: '💬', mode: 'team', timePerQuestion: 15, questionsPerRound: 20, category: 'ثقافة' },
   { id: 'jordan-places', title: 'أماكن في الأردن', description: 'حدد المكان السياحي من الصورة', icon: '🏜️', mode: 'team', timePerQuestion: 12, questionsPerRound: 20, category: 'سياحة' },
   { id: 'saudi-landmarks', title: 'معالم السعودية', description: 'حدد المعلم السياحي السعودي', icon: '🕌', mode: 'team', timePerQuestion: 12, questionsPerRound: 20, category: 'سياحة' },
-  { id: 'emoji-majors', title: 'إيموجي التخصصات', description: 'اعرف التخصص من الإيموجي', icon: '🎓', mode: 'both', timePerQuestion: 15, questionsPerRound: 20, category: 'تعليم' },
+  
 ];

@@ -58,7 +58,6 @@ const GameEngine: React.FC<Props> = ({ config, questions, onBack }) => {
   const moveToNext = useCallback(() => {
     const next = state.currentQuestion + 1;
     if (next >= state.questions.length) {
-      // Save scores
       if (state.mode === 'solo') {
         savePlayerScore({
           name: state.playerName,
@@ -121,7 +120,6 @@ const GameEngine: React.FC<Props> = ({ config, questions, onBack }) => {
     }
   }, [state.selectedAnswer, moveToNext]);
 
-  // Timer
   useEffect(() => {
     if (phase !== 'playing' || state.selectedAnswer) return;
     if (timeLeft <= 0) {
@@ -150,9 +148,16 @@ const GameEngine: React.FC<Props> = ({ config, questions, onBack }) => {
 
   const currentQ = state.questions[state.currentQuestion];
 
+  // --- التعديل اللي طلبته هون ---
+  // بنجهز نسخة من السؤال عشان نتحكم بالصورة
+  const questionToRender = { 
+    ...currentQ,
+    // إذا اللعبة تيك توك ولسا ما جاوب، بنخلي الصورة فاضية عشان ما تطلع
+    image: (config.id === 'tiktok' && !state.showAnswer) ? undefined : currentQ.image
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
-      {/* Header */}
       <div className="w-full max-w-2xl mb-6">
         <div className="flex justify-between items-center mb-4">
           <span className="text-sm text-muted-foreground">
@@ -165,7 +170,6 @@ const GameEngine: React.FC<Props> = ({ config, questions, onBack }) => {
           )}
         </div>
 
-        {/* Score bar */}
         <div className="flex justify-between items-center bg-card rounded-xl p-3 gold-border">
           {state.mode === 'solo' ? (
             <div className="flex justify-between w-full">
@@ -187,7 +191,6 @@ const GameEngine: React.FC<Props> = ({ config, questions, onBack }) => {
           )}
         </div>
 
-        {/* Timer */}
         <div className="mt-4 flex justify-center">
           <div className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold border-4 ${
             timeLeft <= 3 ? 'border-destructive text-destructive animate-pulse' : 'border-primary text-primary'
@@ -196,7 +199,6 @@ const GameEngine: React.FC<Props> = ({ config, questions, onBack }) => {
           </div>
         </div>
 
-        {/* Progress bar */}
         <div className="mt-3 h-2 bg-secondary rounded-full overflow-hidden">
           <div
             className="h-full gold-gradient rounded-full transition-all duration-300"
@@ -206,7 +208,7 @@ const GameEngine: React.FC<Props> = ({ config, questions, onBack }) => {
       </div>
 
       <QuestionCard
-        question={currentQ}
+        question={questionToRender}
         selectedAnswer={state.selectedAnswer}
         isCorrect={state.isCorrect}
         showAnswer={state.showAnswer}

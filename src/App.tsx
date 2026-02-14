@@ -15,6 +15,7 @@ import FastestAnswer from "./pages/games/FastestAnswer";
 import FastMath from "./pages/games/FastMath";
 import DeathRouletteGame from "./pages/games/DeathRouletteGame";
 import SeriesGame from './pages/games/Series';
+import TikTokGame from './pages/games/TikTokGame.tsx';
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/game/famous-movies" element={<FamousMoviesGame />} />
           <Route path="/game/series" element={<SeriesGame />} />
           <Route path="/game/death-roulette" element={<DeathRouletteGame />} />
+          <Route path="/game/tiktok" element={<TikTokGame />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
